@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { PageLayout } from "./components/PageLayout";
+import { useState } from "react";
+import { loginRequest } from "./authConfig";
+import { ProfileData } from "./components/ProfileData";
+import { callMsGraph } from "./graph";
+import { QrReader } from "react-qr-reader";
+import axios from "axios";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Dashboard from "./pages/Dashboard";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/home" element={<Dashboard></Dashboard>}></Route>
+        <Route path="/profile" element={<Profile></Profile>}></Route>
+      </Routes>
+    </>
   );
 }
 
