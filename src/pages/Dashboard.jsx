@@ -63,7 +63,7 @@ const Dashboard = () => {
       <div className="flex justify-center items-center">
         {" "}
         <input
-          placeholder="Search Counties"
+          placeholder="Search Destination"
           className="bg-[#191B1F] rounded-2xl text-white w-[70%] placeholder:text-[#B2B9D2] placeholder:p-4 h-[3rem] pr-2"
           onChange={(e) => setCode(e.target.value)}
         ></input>
