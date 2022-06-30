@@ -15,7 +15,7 @@ const SearchResults = (props) => {
     const name = dose[0];
     console.log(name);
     if (name == props.vaccineOne) {
-      return <div> Aprroved ☑️</div>;
+      return <div> Approved ☑️</div>;
     }
   };
 
